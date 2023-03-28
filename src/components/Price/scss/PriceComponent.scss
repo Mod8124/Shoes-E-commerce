@@ -1,0 +1,50 @@
+@import '@/scss/variables.scss';
+
+.price {
+  width: 100%;
+  font-size: 16px;
+  text-decoration: none;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 55% 45%;
+
+  .price__endprice {
+    width: 100%;
+    font-weight: 700;
+    color: $VeryVarkBlue;
+
+    .price__porcent {
+      padding: 6px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: hsl(26, 100%, 95%);
+      color: $OrangeP;
+      margin-left: 10px;
+      border-radius: 10px;
+    }
+  }
+
+  .price__price {
+    width: 100%;
+    padding-top: 5px;
+    text-decoration: line-through;
+    color: $DarkGrayishBlue;
+    text-align: end;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  .price {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .price {
+    grid-template-columns: 100%;
+
+    .price__price {
+      text-align: start;
+    }
+  }
+}

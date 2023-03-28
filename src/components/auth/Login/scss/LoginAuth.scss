@@ -1,0 +1,83 @@
+@import '@/scss/variables.scss';
+
+.logIn {
+  background: $White;
+  height: 100vh;
+  width: 100%;
+  max-width: 360px;
+  display: grid;
+  grid-template-rows: 25% 75%;
+  text-align: center;
+
+  &__iconClose {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.auth {
+  &__icon {
+    cursor: pointer;
+  }
+
+  &__title {
+    padding-top: 20px;
+    color: $VeryVarkBlue;
+  }
+
+  &__para {
+    color: $DarkGrayishBlue;
+    font-size: 1em;
+  }
+}
+
+.logIng__cta {
+  justify-self: center;
+  height: 100%;
+  text-align: center;
+}
+
+.logIn__imageContainer {
+  text-align: center;
+}
+
+.authInput {
+  width: 90%;
+  border: 2px solid $GrayishBlue;
+  padding: 10px 10px;
+  margin-top: 20px;
+  outline: none;
+  color: $VeryVarkBlue;
+
+  &::placeholder {
+    color: $DarkGrayishBlue;
+  }
+}
+
+.logIn__btnContainer {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logIn__btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: $VeryVarkBlue;
+  font-weight: bolder;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 12px 40px;
+  cursor: pointer;
+}
+
+.auth__accountBtn {
+  background-color: transparent;
+  color: $VeryVarkBlue;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}

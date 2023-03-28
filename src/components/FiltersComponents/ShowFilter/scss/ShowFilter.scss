@@ -1,0 +1,12 @@
+.showFilter {
+  display: flex;
+  column-gap: 10px;
+  min-width: 150px;
+}
+
+.showFilter__title {
+  font-weight: 500;
+  color: hsl(219, 9%, 45%);
+  /* background:hsl(223, 64%, 98%) ; */
+  cursor: pointer;
+}

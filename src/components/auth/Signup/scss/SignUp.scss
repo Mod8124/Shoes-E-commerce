@@ -1,0 +1,28 @@
+@import '@/scss/variables.scss';
+
+.signUp {
+  background: $White;
+  height: 100vh;
+  width: 100%;
+  max-width: 360px;
+  display: grid;
+  grid-template-rows: 30% 70%;
+  text-align: center;
+
+  &__iconBack {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.auth__para--sign {
+  padding-top: 14px;
+}
+
+.auth__para--privacy {
+  padding-top: 14px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.9em;
+}

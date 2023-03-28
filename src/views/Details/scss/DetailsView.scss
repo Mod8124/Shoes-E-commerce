@@ -1,0 +1,22 @@
+.details {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.details__view {
+  display: grid;
+  height: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  grid-template-columns: 100%;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 800px) {
+  .details__view {
+    grid-template-rows: 100%;
+    grid-template-columns: 48% 48%;
+    max-width: 100%;
+  }
+}

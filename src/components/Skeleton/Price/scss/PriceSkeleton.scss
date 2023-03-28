@@ -1,0 +1,35 @@
+@import '@/scss/variables.scss';
+
+.priceSkeleton {
+  width: 100%;
+  height: 25%;
+  padding-top: 12px;
+
+  &__end {
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &__price {
+    width: 85px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: $GrayishBlue;
+  }
+
+  &__discount {
+    width: 60px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: $GrayishBlue;
+  }
+
+  &__original {
+    margin-top: 10px;
+    width: 85px;
+    height: 18px;
+    border-radius: 6px;
+    background-color: $GrayishBlue;
+  }
+}

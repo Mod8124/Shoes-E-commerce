@@ -1,25 +1,51 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import CollectionsView from '@/views/Collections/CollectionsView.vue';
+import HomeView from '@/views/Home/HomeView.vue';
+import ErrorView from '@/views/Error/ErrorView.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: { title: 'Sneaker - Home' },
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+    path: '/collections',
+    name: 'Collections',
+    component: CollectionsView,
+    meta: { title: 'Sneaker - Collections' },
+  },
+  {
+    path: '/details/:id',
+    name: 'Details',
+    component: () => import(/* webpackChunkName: "details" */ '@/views/Details/DetailsView.vue'),
+    props: true,
+    meta: { title: 'Sneakers - Detail' },
+  },
+  {
+    path: '/product/:id',
+    name: 'Product',
+    component: () => import(/* webpackChunkName: "details" */ '@/views/Product/ProductView.vue'),
+    props: true,
+    meta: { title: 'Sneakers - Product' },
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: ErrorView,
+    meta: { title: 'Sneakers - Error' },
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title}`;
+  next();
+});
+
+export default router;

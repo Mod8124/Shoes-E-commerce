@@ -1,0 +1,24 @@
+.homeShoes {
+  display: flex;
+  column-gap: 20px;
+  justify-content: space-between;
+}
+
+.types__title {
+  color: hsl(220, 13%, 13%);
+  padding-bottom: 30px;
+  font-weight: 500;
+}
+
+.types__select {
+  padding-bottom: 20px;
+  color: hsl(219, 9%, 45%);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  font-size: 18px;
+}
+
+.types__select:hover {
+  font-weight: 600;
+}

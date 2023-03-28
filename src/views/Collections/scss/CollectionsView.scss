@@ -1,0 +1,44 @@
+.collectionsShoes {
+  display: flex;
+  width: 100%;
+  column-gap: 50px;
+  justify-content: space-between;
+}
+
+.types {
+  min-width: 180px;
+  max-height: 100vh;
+}
+
+.types__title {
+  color: hsl(220, 13%, 13%);
+  padding-bottom: 30px;
+  font-weight: 500;
+}
+
+.collections {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@keyframes animation {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+
+.collections__container {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  row-gap: 30px;
+  column-gap: 40px;
+}

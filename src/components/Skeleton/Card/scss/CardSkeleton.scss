@@ -1,0 +1,23 @@
+@import '@/scss/variables.scss';
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.cardSkeleton {
+  width: 270px;
+  margin: 0 auto;
+  transition: all 0.5s;
+  border-radius: 10px;
+  height: 280px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  &__image {
+    background-color: $GrayishBlue;
+    width: 100%;
+    height: 75%;
+    border-radius: 10px;
+  }
+}

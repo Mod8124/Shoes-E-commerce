@@ -1,0 +1,91 @@
+@import '@/scss/variables.scss';
+
+.nav__list {
+  width: 100%;
+  max-width: 400px;
+  min-height: 220px;
+  border-radius: 10px;
+  margin: 0 auto;
+
+  .nav__subtitle {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: $VeryVarkBlue;
+    font-weight: 700;
+    border-bottom: 3px solid $LightGrayishBlue;
+  }
+}
+
+.nav__listCartEmpty {
+  height: 100%;
+  min-height: 177px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $DarkGrayishBlue;
+  font-weight: 700;
+}
+
+.nav__list--mobile {
+  box-shadow: none;
+}
+
+.nav__listShopping {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  .nav__imgShopping {
+    width: 55px;
+    max-height: 55px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .nav__listShoppingDetails {
+    color: $DarkGrayishBlue;
+    cursor: default;
+  }
+
+  .nav__listShoppingPrices--strong {
+    font-weight: 700;
+    color: $VeryVarkBlue;
+  }
+
+  .nav__iconDelete {
+    display: flex;
+    align-items: center;
+
+    .nav__listShoppingDelete {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.nav__check {
+  min-height: 60px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+
+  .nav__checkBtn {
+    background-color: $OrangeP;
+    width: 100%;
+    height: 100%;
+    min-height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: $White;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}

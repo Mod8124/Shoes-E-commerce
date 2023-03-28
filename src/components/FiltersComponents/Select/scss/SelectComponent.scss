@@ -1,0 +1,46 @@
+@import '@/scss/variables.scss';
+
+.genre {
+  border-top: 4px solid hsl(223, 64%, 98%);
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.genre__container {
+  padding-bottom: 10px;
+}
+
+.genre__label {
+  padding-left: 6px;
+  color: hsl(219, 9%, 45%);
+  cursor: pointer;
+}
+
+.genre__title {
+  color: hsl(220, 13%, 13%);
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.price {
+  display: flex;
+  column-gap: 6px;
+  min-width: 200px;
+  align-items: center;
+}
+
+.price__title {
+  color: $DarkGrayishBlue;
+  font-weight: 500;
+  font-size: 16px;
+  padding-right: 10px;
+}
+
+.price__select {
+  background: $LightGrayishBlue;
+  border: none;
+  outline: none;
+  color: $VeryVarkBlue;
+  min-height: 20px;
+  padding-left: 5px;
+}

@@ -1,0 +1,106 @@
+@import '@/scss/variables.scss';
+
+.showProduct {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+
+  .showProduct__mainImg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    width: 100%;
+    max-width: 550px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+  }
+}
+
+.showProduct__arrow {
+  position: absolute;
+  display: flex;
+  background-color: white;
+  border-radius: 50%;
+  top: 45%;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.showProduct__arrowSvg path {
+  transition: all 0.4s;
+}
+
+.showProduct__arrow:hover .showProduct__arrowSvg path {
+  stroke: $OrangeP;
+}
+
+.showProduct__arrow--left {
+  left: 5%;
+}
+
+.showProduct__arrow--right {
+  right: 5%;
+}
+
+.showProduct__origalIms {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0px;
+  object-fit: fill;
+}
+
+.showProduct__origalIms--less {
+  max-width: 500px;
+}
+
+.showProduct__imageThubnail {
+  display: none;
+  height: 30%;
+  grid-template-columns: auto auto auto auto;
+  align-items: flex-start;
+  justify-content: center;
+  grid-column-gap: 20px;
+
+  .showProduct__cardImg {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.6s;
+    border: 4px solid transparent;
+  }
+  .showProduct__cardImg:hover {
+    opacity: 0.8;
+  }
+
+  .showPoduct__thubnail {
+    border-radius: 20px;
+    max-width: 118px;
+  }
+
+  .showProduct__cardImg--active {
+    border: 4px solid $OrangeP;
+    opacity: 0.8;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .showProduct__imageThubnail {
+    display: grid;
+  }
+  .showProduct__origalIms {
+    border-radius: 20px;
+  }
+
+  .showProduct__arrow--left {
+    left: -4%;
+  }
+
+  .showProduct__arrow--right {
+    right: -4%;
+  }
+}

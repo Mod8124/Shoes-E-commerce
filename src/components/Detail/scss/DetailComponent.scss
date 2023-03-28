@@ -1,0 +1,125 @@
+.detail {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  padding-top: 20px;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.detail__company {
+  color: hsl(26, 100%, 55%);
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.detail__name {
+  font-size: 30px;
+  width: 100%;
+  max-width: 500px;
+  color: hsl(220, 13%, 13%);
+  padding-bottom: 10px;
+}
+
+.detail__description {
+  font-size: 16px;
+  color: hsl(219, 9%, 45%);
+  max-width: 550px;
+  line-height: 26px;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.detail__add {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 20px;
+  justify-content: space-between;
+  max-width: 550px;
+  padding-top: 30px;
+}
+
+.detail__buttons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background: hsl(223, 64%, 98%);
+  border-radius: 10px;
+  overflow: hidden;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.detail__btn {
+  cursor: pointer;
+  background: hsl(223, 64%, 98%);
+  border: none;
+}
+
+.detail__btn:hover {
+  opacity: 0.8;
+}
+
+.detail__count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  color: hsl(220, 13%, 13%);
+  font-weight: 700;
+}
+
+.detail__addTocartBtn {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 20% auto;
+  justify-content: center;
+  border: none;
+  background: hsl(26, 100%, 55%);
+  padding: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: start;
+}
+
+.detail__addTocartBtn:hover {
+  opacity: 0.8;
+}
+
+.detail__addToCartBtn {
+  max-width: 24px;
+}
+
+@media screen and (min-width: 800px) {
+  .detail {
+    padding: 30px;
+    padding-top: 80px;
+  }
+  .detail__name {
+    font-size: 40px;
+    padding-bottom: 30px;
+  }
+  .detail__add {
+    grid-template-columns: 48% 48%;
+    max-width: 420px;
+  }
+
+  .detail__buttons {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .detail__addTocartBtn {
+    grid-template-columns: 30% auto;
+    text-align: center;
+  }
+
+  .detail__description {
+    max-width: 420px;
+  }
+}

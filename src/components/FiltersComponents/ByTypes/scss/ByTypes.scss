@@ -1,0 +1,26 @@
+@import '@/scss/variables.scss';
+
+.genre {
+  border-top: 4px solid hsl(223, 64%, 98%);
+  padding-top: 20px;
+}
+
+.genre__title {
+  color: hsl(220, 13%, 13%);
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.types__select {
+  padding-bottom: 16px;
+  color: hsl(219, 9%, 45%);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.types__select--active {
+  color: $OrangeP;
+}

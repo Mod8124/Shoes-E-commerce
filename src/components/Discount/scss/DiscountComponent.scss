@@ -1,0 +1,20 @@
+@import '@/scss/variables.scss';
+
+.discountComponent {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  color: $LightGrayishBlue;
+  font-size: 0.8em;
+  /* position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%; */
+
+  &__span {
+    color: $OrangeP;
+  }
+}

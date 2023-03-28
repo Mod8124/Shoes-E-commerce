@@ -1,0 +1,29 @@
+.search {
+  position: relative;
+  width: 100%;
+}
+
+.search__img {
+  position: absolute;
+  left: 15px;
+  top: 5px;
+}
+
+.search__input {
+  width: 100%;
+  min-height: 40px;
+  padding-left: 54px;
+  padding-right: 10px;
+  border-radius: 25px;
+  outline: none;
+  background: hsl(223, 64%, 98%);
+  border: none;
+  color: hsl(220, 13%, 13%);
+  font-size: 16px;
+  max-width: 500px;
+  transition: all 0.6s ease-in-out;
+}
+
+.search__input:focus {
+  max-width: 700px;
+}

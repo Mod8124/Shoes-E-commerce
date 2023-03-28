@@ -1,0 +1,16 @@
+.filter {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.filters .price {
+  margin-top: -8px;
+}
