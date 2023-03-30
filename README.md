@@ -1,8 +1,22 @@
-# Sneakers E-commerce
+<br>
 
-![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![Vue.js](https://img.shields.io/badge/vuex-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+<div align="center">
 
-# ScreenShot
+  <img src="./public/shoes_log.svg" alt="sneaker" width="80">
+
+  <h2 align="center">Sneaker E-commerce</h2>
+  <p align="center">
+    <a href="https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-tmQXOQU78e"><strong>Frontend Mentor Challenge</strong></a>
+    <br />
+    <br />
+      <img src="https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D" alt="vue icon">
+      <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="type icon">
+      <img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" alt="sass icon">
+      <img src="https://img.shields.io/badge/vuex-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D" alt="vuex icon">
+      <img src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white">
+      <img src="https://img.shields.io/badge/status-in progress-23C21325?style=for-the-badge" alt="status icon">
+  </p>
+</div>
 
 <div align="start">
     <img width="100%" heigth="100%" src="./public/design/newDesign/desktop-home.png"/>
