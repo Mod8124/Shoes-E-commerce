@@ -1,5 +1,5 @@
 <template>
-  <div class="nav__list nav__list--mobile">
+  <article class="nav__list nav__list--mobile">
     <p class="nav__subtitle">Cart</p>
 
     <div class="nav__listCartNotEmpty" v-if="shoes.length > 0">
@@ -34,27 +34,12 @@
     <div class="nav__check" v-if="shoes.length > 0">
       <button @click="restart" class="nav__checkBtn">Checkout</button>
     </div>
-  </div>
+  </article>
 </template>
 
 <script lang="ts">
-import { useStore } from 'vuex';
-import { computed } from 'vue';
-export default {
-  name: 'NavBar',
-  computed: {},
-  setup() {
-    const store = useStore();
-    const shoes = computed(() => store.state.shoes);
-    const deleteShoes = (index: number) => store.commit('deleteShoes', index);
-    const restart = () => store.commit('restart');
-    return {
-      shoes,
-      deleteShoes,
-      restart,
-    };
-  },
-};
+import MiniCard from './logic/MiniCard';
+export default MiniCard;
 </script>
 
 <style lang="scss">

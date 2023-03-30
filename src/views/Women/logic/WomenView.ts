@@ -1,28 +1,43 @@
+import Card from '@/components/Card/CardComponent.vue';
+import Filter from '@/components/FiltersComponents/Filter/FilterComponent.vue';
+import ByTypes from '@/components/FiltersComponents/ByTypes/ByTypes.vue';
+import CardSkeleton from '@/components/Skeleton/Card/CardSkeleton.vue';
+import { computed, onMounted, onUnmounted } from '@vue/runtime-core';
+import { useStore } from 'vuex';
 import { defineComponent } from 'vue';
-// import fetchShoes from '@/fetch/fetchByGenre';
-// import Card from '@/components/Card/Card';
-// import Loading from '@/components/Loading/loading';
-// import Filter from '@/components/Filter/Filter';
 
 export default defineComponent({
   name: 'WomenView',
   components: {
-    // Card,
-    // Loading,
-    // Filter,
+    Card,
+    Filter,
+    ByTypes,
+    CardSkeleton,
   },
   setup() {
-    console.log('hello');
-    // const { shoes, load } = fetchShoes('women');
-    // load();
-    // const types = computed(() => {
-    //   let unique = new Set();
-    //   shoes.value.forEach((shoe) => unique.add(shoe.type));
-    //   return Array.from(unique);
-    // });
-    // return {
-    //   shoes,
-    //   types,
-    // };
+    const store = useStore();
+    const shoes = computed(() => store.getters.sortedSneakers);
+    const showFilter = computed(() => store.state.showFilter);
+    const isFetching = computed<boolean>(() => store.state.isFetching);
+
+    onMounted(() => {
+      store.dispatch('set_filters', {
+        filterType: 'gender',
+        filterValue: 'Women',
+      });
+    });
+
+    onUnmounted(() => {
+      store.dispatch('set_filters', {
+        filterType: 'gender',
+        filterValue: '',
+      });
+    });
+
+    return {
+      shoes,
+      showFilter,
+      isFetching,
+    };
   },
 });

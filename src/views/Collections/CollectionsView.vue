@@ -28,7 +28,7 @@
             <Card :shoe="shoe" />
           </router-link>
         </article>
-        <Pagination />
+        <!-- <Pagination /> -->
       </section>
     </section>
   </main>

@@ -1,21 +1,22 @@
 <template>
-  <main>
-    <h1>women</h1>
-  </main>
-  <!-- <div class="home">
-    <Loading v-if="shoes.length < 1"></Loading>
-    <Filter v-if="shoes.length > 1" />
+  <main class="collections">
+    <Filter />
 
-    <main v-if="shoes.length > 1" class="homeShoes">
-      <section class="types">
-        <h1 class="types__title">Shoes ({{ shoes.length }})</h1>
-        <article class="types__types" v-for="type in types" :key="type + 'eso'">
-          <h4 class="types__select">{{ type }}</h4>
+    <section class="collectionsShoes">
+      <article class="types" v-if="showFilter">
+        <h1 class="types__title">Women's Shoes ({{ shoes.length }})</h1>
+        <ByTypes byCategory />
+        <ByTypes byBrand></ByTypes>
+      </article>
+
+      <section class="collections__container" v-if="isFetching">
+        <article v-for="cardSkeleton in [...Array(15).keys()]" :key="cardSkeleton" class="home__product">
+          <CardSkeleton />
         </article>
       </section>
 
-      <section class="home__container">
-        <article class="home__product" v-for="shoe in shoes" :key="shoe.id">
+      <section class="collections__container" v-if="!isFetching">
+        <article class="collections__product" v-for="shoe in shoes" :key="shoe.id + 'genre'">
           <router-link
             :to="
               shoe.id === 0
@@ -27,8 +28,8 @@
           </router-link>
         </article>
       </section>
-    </main>
-  </div> -->
+    </section>
+  </main>
 </template>
 
 <script lang="ts">

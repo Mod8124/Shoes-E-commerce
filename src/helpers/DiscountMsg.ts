@@ -1,4 +1,4 @@
-export const discountMsg = [
+export const discountMsg: string[][] = [
   ['Sneaker App Download', 'the app to access everything sneaker'],
   ['Save Up', 'to 40% shop all our new markdowns'],
   ['Sneaker members', 'Get free shipping'],

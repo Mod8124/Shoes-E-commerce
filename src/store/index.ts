@@ -90,7 +90,6 @@ export default createStore<IState>({
       }
     },
     set_filters({ commit }, { filterType, filterValue }) {
-      console.log(filterType, filterValue);
       commit('SET_FILTERS', { filterType, filterValue });
     },
 

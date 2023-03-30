@@ -1,3 +1,5 @@
+@import '@/scss/variables.scss';
+
 .detail {
   width: 100%;
   height: 100%;
@@ -8,7 +10,7 @@
 }
 
 .detail__company {
-  color: hsl(26, 100%, 55%);
+  color: $OrangeP;
   font-size: 16px;
   padding-bottom: 10px;
 }
@@ -17,13 +19,13 @@
   font-size: 30px;
   width: 100%;
   max-width: 500px;
-  color: hsl(220, 13%, 13%);
+  color: $VeryVarkBlue;
   padding-bottom: 10px;
 }
 
 .detail__description {
   font-size: 16px;
-  color: hsl(219, 9%, 45%);
+  color: $DarkGrayishBlue;
   max-width: 550px;
   line-height: 26px;
   width: 100%;
@@ -43,7 +45,7 @@
 .detail__buttons {
   display: grid;
   grid-template-columns: auto auto auto;
-  background: hsl(223, 64%, 98%);
+  background: $LightGrayishBlue;
   border-radius: 10px;
   overflow: hidden;
   padding-top: 14px;
@@ -52,7 +54,7 @@
 
 .detail__btn {
   cursor: pointer;
-  background: hsl(223, 64%, 98%);
+  background: $LightGrayishBlue;
   border: none;
 }
 
@@ -65,7 +67,7 @@
   align-items: center;
   justify-content: center;
   cursor: default;
-  color: hsl(220, 13%, 13%);
+  color: $VeryVarkBlue;
   font-weight: 700;
 }
 
@@ -76,7 +78,7 @@
   grid-template-columns: 20% auto;
   justify-content: center;
   border: none;
-  background: hsl(26, 100%, 55%);
+  background: $OrangeP;
   padding: 8px;
   padding-top: 12px;
   padding-bottom: 12px;

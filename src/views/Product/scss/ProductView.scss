@@ -2,11 +2,15 @@
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
 .product__container {
   display: grid;
   height: 90%;
+  width: 100%;
   grid-template-columns: 100%;
   justify-content: space-between;
 }

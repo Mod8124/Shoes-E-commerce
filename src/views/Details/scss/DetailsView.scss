@@ -2,6 +2,7 @@
   max-width: 1440px;
   width: 90%;
   margin: 0 auto;
+  padding-top: 120px;
 }
 
 .details__view {
@@ -16,7 +17,7 @@
 @media screen and (min-width: 800px) {
   .details__view {
     grid-template-rows: 100%;
-    grid-template-columns: 48% 48%;
-    max-width: 100%;
+    grid-template-columns: auto auto;
+    max-width: 1300px;
   }
 }

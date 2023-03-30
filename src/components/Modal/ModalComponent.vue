@@ -21,16 +21,8 @@
 </template>
 
 <script lang="ts">
-import ShowProduct from '@/components/ShowProduct/ShowProduct.vue';
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'ModalComponent',
-  props: ['title', 'main', 'close', 'shoe'],
-  components: {
-    ShowProduct,
-  },
-});
+import ModalComponent from './logic/ModalComponent';
+export default ModalComponent;
 </script>
 
 <style lang="scss" scoped>

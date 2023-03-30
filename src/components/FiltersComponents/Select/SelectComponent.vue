@@ -30,59 +30,17 @@
 
   <article v-if="price" class="price">
     <label for="low" class="price__title">Sort By:</label>
-    <select class="price__select" v-model="pickedPrice" @change="sortByPrice(pickedPrice)">
-      <option value="" class="price__option">Featured</option>
-      <option value="high" class="price__option">Price: High-Low</option>
-      <option value="low" class="price__option">Price: Low-High</option>
+    <select class="price__select" v-model="filterSort">
+      <option v-for="option in optionsSelect" :value="option.value" :key="option.value" class="price__option">
+        {{ option.label }}
+      </option>
     </select>
   </article>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
-import { ref } from 'vue';
-import { useStore } from 'vuex';
-
-export default defineComponent({
-  name: 'SelectComponent',
-  components: {},
-  props: {
-    genre: {
-      require: false,
-      type: Boolean as PropType<boolean>,
-    },
-    price: {
-      required: false,
-      type: Boolean as PropType<boolean>,
-    },
-  },
-  setup() {
-    const pickedPrice = ref<string>('');
-    const pickedGender = ref<string>('');
-    const store = useStore();
-
-    const filterByGenre = (gender: string) => {
-      store.dispatch('set_filters', {
-        filterType: 'gender',
-        filterValue: gender,
-      });
-    };
-
-    const sortByPrice = (price: string) => {
-      store.dispatch('set_filters', {
-        filterType: 'sort',
-        filterValue: price,
-      });
-    };
-
-    return {
-      pickedPrice,
-      pickedGender,
-      sortByPrice,
-      filterByGenre,
-    };
-  },
-});
+import SelectComponent from './logic/SelectComponent';
+export default SelectComponent;
 </script>
 
 <style scoped lang="scss">

@@ -6,27 +6,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
-import { useStore } from 'vuex';
-
-export default defineComponent({
-  name: 'SearchComponent',
-  setup() {
-    const store = useStore();
-    const search = ref<string>('');
-
-    const getSearch = () => {
-      store.dispatch('set_filters', {
-        filterType: 'search',
-        filterValue: search.value,
-      });
-    };
-    return {
-      search,
-      getSearch,
-    };
-  },
-});
+import SearchComponent from './logic/SearchComponent';
+export default SearchComponent;
 </script>
 
 <style scoped lang="scss">

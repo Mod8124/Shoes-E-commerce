@@ -6,21 +6,8 @@
 </template>
 
 <script lang="ts">
-import Price from '../Price/PriceComponent.vue';
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'CardComponent',
-  props: {
-    shoe: {
-      type: Object,
-      required: true,
-    },
-  },
-  components: {
-    Price,
-  },
-});
+import CardComponent from './logic/CardComponent';
+export default CardComponent;
 </script>
 
 <style lang="scss">

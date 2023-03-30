@@ -10,16 +10,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-export default defineComponent({
-  name: 'PriceComponent',
-  props: {
-    shoe: {
-      type: Object,
-      required: true,
-    },
-  },
-});
+import PriceComponent from './logic/PriceComponent';
+export default PriceComponent;
 </script>
 
 <style lang="scss">

@@ -26,55 +26,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, ref } from 'vue';
-import { useStore } from 'vuex';
-import { featured } from '@/helpers/featured';
-
-export default defineComponent({
-  name: 'ByTypes',
-  props: {
-    byBrand: {
-      require: true,
-      type: Boolean as PropType<boolean>,
-    },
-    byCategory: {
-      require: true,
-      type: Boolean as PropType<boolean>,
-    },
-  },
-  setup() {
-    const store = useStore();
-    const selectCategory = ref<string>('');
-    const selectBrand = ref<string>('');
-
-    const { TYPES, BRANDS } = featured();
-
-    const getCategory = (category: string) => {
-      selectCategory.value = selectCategory.value === category ? '' : category;
-      store.dispatch('set_filters', {
-        filterType: 'category',
-        filterValue: selectCategory,
-      });
-    };
-
-    const getBrand = (brand: string) => {
-      selectBrand.value = selectBrand.value === brand ? '' : brand;
-      store.dispatch('set_filters', {
-        filterType: 'brand',
-        filterValue: selectBrand,
-      });
-    };
-
-    return {
-      getBrand,
-      getCategory,
-      TYPES,
-      BRANDS,
-      selectCategory,
-      selectBrand,
-    };
-  },
-});
+import ByTypes from './logic/ByTypes';
+export default ByTypes;
 </script>
 
 <style scoped lang="scss">
