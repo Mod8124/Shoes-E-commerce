@@ -1,10 +1,19 @@
-# Shoes E-commerce
+# Sneakers E-commerce
 
-![Vue.js](https://img.shields.io/badge/vuejs-3.0-green?style=flat&logo=vuedotjs&logoColor=%234FC08D) ![TypeScript](https://img.shields.io/badge/typescript-4.1-blue?style=flat&logo=typescript&logoColor=blue) ![ESLint](https://img.shields.io/badge/ESLint-6.7-purple?style=flat&logo=eslint&logoColor=purple) ![SASS](https://img.shields.io/badge/SASS-1.52-pink?style=flat&logo=SASS&logoColor=pink)
+![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![Vue.js](https://img.shields.io/badge/vuex-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
 # ScreenShot
 
-![Design preview for the E-commerce product page coding challenge](./public/design/desktop-preview.jpg)
+<div align="start">
+    <img width="500" heigth="400" src="./public/design/newDesign/desktop-home.png"/>
+    <img width="500" heigth="400" src="./public/design/newDesign/desktop-collection.png"/>
+</div>
+
+## 📃Project Overview
+
+The shoe e-commerce project is a web-based application built with Vue, Vuex, Vue Router, TypeScript, and authentication. The application allows users to browse, purchase, and manage shoes, using features such as product categories, search, cart management, and user accounts. The application is built using TypeScript and Vuex to manage the state and Vue Router for routing, with authentication to secure user data.
+
+## 📋Features:
 
 Your users should be able to:
 
