@@ -5,8 +5,8 @@
 # ScreenShot
 
 <div align="start">
-    <img width="500" heigth="400" src="./public/design/newDesign/desktop-home.png"/>
-    <img width="500" heigth="400" src="./public/design/newDesign/desktop-collection.png"/>
+    <img width="100%" heigth="100%" src="./public/design/newDesign/desktop-home.png"/>
+    <img width="100%" heigth="100%" src="./public/design/newDesign/desktop-collection.png"/>
 </div>
 
 ## 📃Project Overview
