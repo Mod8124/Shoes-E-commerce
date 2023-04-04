@@ -38,7 +38,6 @@
 </template>
 
 <script lang="ts">
-import DetailsSkeleton from '@/components/Skeleton/details/DetailsSkeleton.vue';
 import DetailsView from './logic/DetailsView';
 export default DetailsView;
 </script>

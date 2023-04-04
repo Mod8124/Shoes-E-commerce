@@ -1,0 +1,67 @@
+@import '@/scss/variables.scss';
+.footer {
+  min-height: 30vh;
+  background: $VeryVarkBlue;
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 40%;
+  padding: 70px 200px;
+  padding-bottom: 0px;
+
+  &__title {
+    color: white;
+    padding-bottom: 14px;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    height: 100%;
+    align-content: space-evenly;
+    justify-content: space-between;
+  }
+
+  &__link {
+    color: $DarkGrayishBlue;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.social {
+  color: white;
+  flex-direction: row;
+  justify-content: unset;
+  justify-content: flex-end;
+  column-gap: 40px;
+}
+
+.footer__footer {
+  padding-top: 70px;
+  grid-column: 1 / 5;
+  color: $DarkGrayishBlue;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-bottom: 20px;
+
+  div {
+    display: flex;
+  }
+
+  div:nth-child(1) {
+    column-gap: 20px;
+
+    p:nth-child(1) {
+      color: white;
+    }
+  }
+
+  div:nth-child(2) {
+    justify-content: flex-end;
+    column-gap: 20px;
+    color: $DarkGrayishBlue;
+  }
+}

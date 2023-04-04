@@ -14,6 +14,11 @@ import {
   MdKeyboardarrowdown, // icon arrow bottom
   HiMinusSm, //icon minus
   HiSolidPlus, // icon plus
+  BiInstagram, // instagram
+  BiTwitter, // twitter
+  CoTiktok, // tik tok
+  LaFacebookF, // facebook
+  MdPlaceSharp, // icon place or gps
 } from 'oh-vue-icons/icons';
 
 addIcons(
@@ -25,7 +30,14 @@ addIcons(
   MdKeyboardarrowup,
   MdKeyboardarrowdown,
   HiMinusSm,
-  HiSolidPlus
+  HiSolidPlus,
+
+  BiInstagram,
+  BiTwitter,
+  CoTiktok,
+  LaFacebookF,
+
+  MdPlaceSharp
 );
 
 createApp(App).component('v-icon', OhVueIcon).use(store).use(router).mount('#app');

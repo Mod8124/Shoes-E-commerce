@@ -1,14 +1,5 @@
 <template>
   <section class="pagination">
-    {{ page }}
-    <v-icon
-      name="io-arrow-back-circle-sharp"
-      fill="#FF6E00"
-      scale="1.7"
-      class="pagination__arrow"
-      v-if="page === 2"
-      @click="changePage(1)"
-    />
     <button
       @click="changePage(1)"
       :class="page === 1 ? 'pagination__button pagination__button--active' : 'pagination__button'"
@@ -22,14 +13,6 @@
     >
       2
     </button>
-    <v-icon
-      @click="changePage(2)"
-      name="io-arrow-forward-circle"
-      fill="#FF6E00"
-      scale="1.7"
-      class="pagination__arrow"
-      v-if="page === 1"
-    />
   </section>
 </template>
 

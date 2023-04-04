@@ -133,6 +133,7 @@
   width: 100%;
   max-width: 420px;
   border-radius: 10px;
+  margin-bottom: 20px;
   background-color: $LightGrayishBlue;
   color: $VeryVarkBlue;
   font-weight: bold;
@@ -141,4 +142,15 @@
   justify-content: center;
   column-gap: 1vh;
   cursor: pointer;
+}
+
+.faq {
+  h2 {
+    padding-bottom: 30px;
+    color: $VeryVarkBlue;
+  }
+}
+
+.accordion--active {
+  border-bottom: 2px solid $LightGrayishBlue;
 }

@@ -20,6 +20,12 @@ export interface ICarShoe {
   count: number;
 }
 
+export interface IFaq {
+  title: string;
+  subTitle: string;
+  description: string;
+}
+
 // store
 export interface IFilters {
   category: string;

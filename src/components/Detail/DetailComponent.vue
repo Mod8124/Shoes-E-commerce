@@ -30,11 +30,6 @@
     <button class="detail__favoriteBtn">
       <v-icon name="hi-heart" fill="hsl(26, 100%, 55%)" scale="1.1" /> Favorite
     </button>
-    <accordion-component
-      title="Delivery & Returns"
-      subTitle="Free delivery for purchases above ₹14,000.00"
-      description="Returns are eligible within 30 days from the date of purchase. Return shipping labels are FREE for DC Crew Members"
-    />
   </section>
 </template>
 

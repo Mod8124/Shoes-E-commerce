@@ -20,8 +20,8 @@
           <router-link
             :to="
               shoe.id === 0
-                ? { name: 'Product', params: { id: shoe.name } }
-                : { name: 'Details', params: { id: shoe.name } }
+                ? { name: 'Product', params: { id: shoe.id } }
+                : { name: 'Details', params: { id: shoe.id } }
             "
           >
             <Card :shoe="shoe" />

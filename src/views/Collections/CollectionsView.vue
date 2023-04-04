@@ -10,25 +10,28 @@
         <ByTypes byBrand></ByTypes>
       </article>
 
-      <section class="collections__container" v-if="isFetching">
-        <article v-for="cardSkeleton in [...Array(15).keys()]" :key="cardSkeleton" class="home__product">
-          <CardSkeleton />
+      <section>
+        <article class="collections__container" v-if="isFetching">
+          <div v-for="cardSkeleton in [...Array(15).keys()]" :key="cardSkeleton" class="home__product">
+            <CardSkeleton />
+          </div>
         </article>
-      </section>
 
-      <section class="collections__container" v-if="!isFetching">
-        <nav class="collections__product" v-for="shoe in shoes" :key="shoe.id + 'collections'">
-          <router-link
-            :to="
-              shoe.id === 0
-                ? { name: 'Product', params: { id: shoe.id } }
-                : { name: 'Details', params: { id: shoe.id } }
-            "
-          >
-            <Card :shoe="shoe" />
-          </router-link>
-        </nav>
-        <!-- <Pagination /> -->
+        <article class="collections__container" v-if="!isFetching">
+          <nav class="collections__product" v-for="shoe in shoes" :key="shoe.id + 'collections'">
+            <router-link
+              :to="
+                shoe.id === 0
+                  ? { name: 'Product', params: { id: shoe.id } }
+                  : { name: 'Details', params: { id: shoe.id } }
+              "
+            >
+              <Card :shoe="shoe" />
+            </router-link>
+          </nav>
+        </article>
+
+        <Pagination />
       </section>
     </section>
   </main>
