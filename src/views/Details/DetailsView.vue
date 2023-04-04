@@ -1,13 +1,44 @@
 <template>
   <main class="details">
-    <section class="details__view">
+    <DetailsSkeleton v-if="isFetching" />
+
+    <section class="details__view" v-if="!isFetching">
       <Photo :mainShoe="false" :shoe="shoe[0]" />
       <Detail :shoe="shoe[0]" />
+    </section>
+
+    <section class="details__recommendations">
+      <h5>Relational Product /</h5>
+      <h2>WE RECOMMEND</h2>
+
+      <article class="collections__container details__recommendationsContainer" v-if="isFetching">
+        <article
+          v-for="cardSkeleton in [...Array(4).keys()]"
+          :key="cardSkeleton + 'details-skeleton'"
+          class="home__product"
+        >
+          <CardSkeleton />
+        </article>
+      </article>
+      <article class="collections__container details__recommendationsContainer" v-if="!isFetching">
+        <nav v-for="shoe in recommendations" :key="shoe.id + 'recommendations'">
+          <router-link
+            :to="
+              shoe.id === 0
+                ? { name: 'Product', params: { id: shoe.id } }
+                : { name: 'Details', params: { id: shoe.id } }
+            "
+          >
+            <CardComponent :shoe="shoe" />
+          </router-link>
+        </nav>
+      </article>
     </section>
   </main>
 </template>
 
 <script lang="ts">
+import DetailsSkeleton from '@/components/Skeleton/details/DetailsSkeleton.vue';
 import DetailsView from './logic/DetailsView';
 export default DetailsView;
 </script>

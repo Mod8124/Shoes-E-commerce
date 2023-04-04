@@ -2,6 +2,7 @@ import { defineComponent } from 'vue';
 import { discountMsg } from '@/helpers/DiscountMsg';
 import { ref } from 'vue';
 import { onMounted } from 'vue';
+
 export default defineComponent({
   name: 'DiscountComponent',
   setup() {

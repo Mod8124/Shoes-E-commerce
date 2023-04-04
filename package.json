@@ -9,7 +9,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@types/js-cookie": "^3.0.3",
     "core-js": "^3.8.3",
+    "js-cookie": "^3.0.1",
     "oh-vue-icons": "^1.0.0-rc3",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",

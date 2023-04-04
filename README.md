@@ -25,7 +25,7 @@
 
 ## 📃Project Overview
 
-The shoe e-commerce project is a web-based application built with Vue, Vuex, Vue Router, TypeScript, and authentication. The application allows users to browse, purchase, and manage shoes, using features such as product categories, search, cart management, and user accounts. The application is built using TypeScript and Vuex to manage the state and Vue Router for routing, with authentication to secure user data.
+Developed & designed a sneaker e-commerce app inspired in <a href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6">Frontend Mentor</a> challenge, built API with API for providing all the sneakers, utilizing NodeJs on the server-side, and the client-side with Vue via an API. Implemented design features, state management, router, and CSS methodology like BEM in SASS.
 
 ## 📋Features:
 

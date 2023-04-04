@@ -1,0 +1,56 @@
+@import '@/scss/variables.scss';
+
+.infoSkeleton {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  padding-top: 60px;
+
+  &__subTitle {
+    width: 40%;
+    height: 25px;
+    margin-bottom: 30px;
+    background-color: $DarkGrayishBlue;
+  }
+
+  &__title {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+    background-color: $DarkGrayishBlue;
+    max-width: 440px;
+  }
+
+  &__description {
+    width: 100%;
+    height: 15px;
+    margin-bottom: 15px;
+    background-color: $GrayishBlue;
+    max-width: 440px;
+  }
+
+  .priceSkeleton {
+    height: 25%;
+  }
+
+  &__favorite {
+    background-color: $GrayishBlue;
+    width: 100%;
+    max-width: 420px;
+    height: 30px;
+  }
+}
+
+.infoSkeletonButtons {
+  width: 100%;
+  height: 30px;
+  max-width: 420px;
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  justify-content: space-around;
+
+  &__btn {
+    background-color: $GrayishBlue;
+  }
+}

@@ -2,7 +2,8 @@
   <main class="product">
     <section class="product__container">
       <Photo :mainShoe="true" />
-      <Detail :shoe="shoe[0]" />
+      <Detail :shoe="shoe[0]" v-if="!isFetching" />
+      <InfoSkeleton v-if="isFetching" />
     </section>
   </main>
 </template>

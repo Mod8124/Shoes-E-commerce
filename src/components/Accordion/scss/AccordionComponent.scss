@@ -1,0 +1,22 @@
+@import '@/scss/variables.scss';
+
+.accordion {
+  max-width: 420px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px 0px;
+  border-top: 3px solid $LightGrayishBlue;
+  border-bottom: 3px solid $LightGrayishBlue;
+
+  &__title {
+    color: $VeryVarkBlue;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__para {
+    color: $DarkGrayishBlue;
+    padding-top: 14px;
+  }
+}

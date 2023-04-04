@@ -28,11 +28,6 @@ export interface IFilters {
   search: string;
   brand: string;
 }
-
-export interface ITest {
-  [key: string]: string;
-}
-
 export interface IState {
   shoes: ICarShoe[];
   showFilter: boolean;

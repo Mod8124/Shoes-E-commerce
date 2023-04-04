@@ -15,6 +15,8 @@ export default defineComponent({
     const shoes = computed(() => store.state.shoes);
     const showMiniCard = ref(false);
     const active = ref(false);
+    const prevScroll = ref(0);
+    const navBar = ref<HTMLDivElement | null>(null);
 
     const isModalAuth = computed<boolean>(() => store.state.isModalAuth);
 
@@ -27,11 +29,20 @@ export default defineComponent({
     };
 
     function handleScroll() {
-      if (window.scrollY > 1) {
-        active.value = true;
+      const currentScroll = window.pageYOffset;
+      const navBarHeight = navBar.value?.offsetHeight || 0;
+      if (prevScroll.value > currentScroll && currentScroll !== navBarHeight) {
+        if (navBar.value !== null) {
+          navBar.value.style.top = '0px';
+          active.value = true;
+        }
       } else {
-        active.value = false;
+        if (navBar.value !== null) {
+          navBar.value.style.top = `-${navBarHeight}px`;
+          active.value = false;
+        }
       }
+      prevScroll.value = currentScroll;
     }
 
     const changeModalAuth = () => {
@@ -49,6 +60,7 @@ export default defineComponent({
       active,
       isModalAuth,
       changeModalAuth,
+      navBar,
     };
   },
 });

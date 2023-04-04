@@ -2,6 +2,7 @@ import { defineComponent, PropType } from 'vue';
 import { ref } from '@vue/reactivity';
 import { useStore } from 'vuex';
 import Price from '@/components/Price/PriceComponent.vue';
+import AccordionComponent from '@/components/Accordion/AccordionComponent.vue';
 import { ICarShoe } from '@/interface/interface';
 import { IShoe } from '@/interface/interface';
 
@@ -14,6 +15,7 @@ export default defineComponent({
   },
   components: {
     Price,
+    AccordionComponent,
   },
   setup(props) {
     const count = ref<number>(0);

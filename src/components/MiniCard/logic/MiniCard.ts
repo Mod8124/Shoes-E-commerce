@@ -3,7 +3,6 @@ import { computed, defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'MiniCard',
-  computed: {},
   setup() {
     const store = useStore();
     const shoes = computed(() => store.state.shoes);

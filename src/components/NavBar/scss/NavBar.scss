@@ -100,7 +100,8 @@ h5 {
   margin: 0 auto;
   align-items: center;
   border-bottom: 3px solid $LightGrayishBlue;
-  min-height: 90px;
+  min-height: 80px;
+  transition: all 0.2s ease-in;
 
   .nav__logo-desktop {
     max-width: 200px;
@@ -268,8 +269,8 @@ h5 {
     display: grid;
   }
   .nav__desktop--active {
-    border-bottom: 4px solid $OrangeP;
-    min-height: 90px;
+    border-bottom: 3px solid transparent;
+    min-height: 80px;
   }
   .nav__mobile {
     display: none;

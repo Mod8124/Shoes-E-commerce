@@ -15,6 +15,11 @@
   justify-content: space-between;
 }
 
+.product__skeleton {
+  width: 100%;
+  background-color: blue;
+}
+
 @media screen and (min-width: 700px) {
   .product {
     width: 90%;

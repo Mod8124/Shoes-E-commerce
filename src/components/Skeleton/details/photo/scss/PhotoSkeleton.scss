@@ -1,0 +1,14 @@
+@import '@/scss/variables.scss';
+
+.photoSkeleton {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+
+  &__image {
+    background-color: $GrayishBlue;
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+  }
+}

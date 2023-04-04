@@ -1,8 +1,10 @@
+@import '@/scss/variables.scss';
+
 .details {
   max-width: 1440px;
   width: 90%;
   margin: 0 auto;
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
 .details__view {
@@ -10,8 +12,30 @@
   height: 100%;
   max-width: 500px;
   margin: 0 auto;
-  grid-template-columns: 100%;
+  grid-template-columns: 110%;
   justify-content: space-between;
+}
+
+.details__recommendations {
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding-bottom: 60px;
+
+  a {
+    text-decoration: none;
+  }
+
+  h5 {
+    color: $OrangeP;
+    padding-bottom: 8px;
+  }
+
+  h2 {
+    color: $VeryVarkBlue;
+    padding-bottom: 26px;
+    text-transform: uppercase;
+  }
 }
 
 @media screen and (min-width: 800px) {

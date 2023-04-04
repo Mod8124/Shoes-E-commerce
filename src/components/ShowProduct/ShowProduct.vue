@@ -37,7 +37,7 @@
         <img
           :src="getImage(img)"
           :alt="img"
-          @click="changeCount(index)"
+          @mouseover="changeCount(index)"
           :class="count === index ? 'showProduct__cardImg showProduct__cardImg--active' : 'showProduct__cardImg'"
         />
       </div>

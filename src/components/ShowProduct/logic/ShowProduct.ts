@@ -7,22 +7,22 @@ export default defineComponent({
   props: ['showButtons', 'changeShowModal'],
   setup() {
     const { originalImgs, imgs } = Imgs();
-    const count = ref(0);
+    const count = ref<number>(0);
 
     const getImage = (pic: string) => {
       return require('@/assets/images/' + pic);
     };
 
     const next = () => {
-      if (count.value < 3) {
+      const MAXINDEX = 3;
+      if (count.value < MAXINDEX) {
         count.value++;
-        console.log('hola', count.value);
       }
-      console.log('adios');
     };
 
     const prev = () => {
-      if (count.value > 0) {
+      const MININDEX = 0;
+      if (count.value > MININDEX) {
         count.value--;
       }
     };

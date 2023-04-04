@@ -6,13 +6,26 @@ import store from './store';
 import { OhVueIcon, addIcons } from 'oh-vue-icons';
 import {
   PrUser, //user icon
-  IoArrowBackCircleSharp,
-  IoArrowForwardCircle,
-  FaLongArrowAltRight,
   MdKeyboardarrowleftOutlined, // icon back
   MdCloseRound, // icon close
+  HiHeart, // icon hear just border
+  HiSolidHeart, // icon heart fill
+  MdKeyboardarrowup, // icon arrow top
+  MdKeyboardarrowdown, // icon arrow bottom
+  HiMinusSm, //icon minus
+  HiSolidPlus, // icon plus
 } from 'oh-vue-icons/icons';
 
-addIcons(PrUser, IoArrowBackCircleSharp, IoArrowForwardCircle, FaLongArrowAltRight, MdKeyboardarrowleftOutlined, MdCloseRound);
+addIcons(
+  PrUser,
+  MdKeyboardarrowleftOutlined,
+  MdCloseRound,
+  HiHeart,
+  HiSolidHeart,
+  MdKeyboardarrowup,
+  MdKeyboardarrowdown,
+  HiMinusSm,
+  HiSolidPlus
+);
 
 createApp(App).component('v-icon', OhVueIcon).use(store).use(router).mount('#app');

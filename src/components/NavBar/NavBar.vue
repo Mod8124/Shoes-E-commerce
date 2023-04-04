@@ -2,7 +2,7 @@
   <header :class="active ? 'nav nav-mobile nav--active' : 'nav nav--mobile'">
     <!--start nav-->
 
-    <div :class="active ? 'nav__desktop nav__desktop--active' : 'nav__desktop'">
+    <div :class="active ? 'nav__desktop nav__desktop--active' : 'nav__desktop'" ref="navBar">
       <!--nav__desktop-->
       <div class="nav__logo nav__logo-desktop">
         <router-link to="/">
