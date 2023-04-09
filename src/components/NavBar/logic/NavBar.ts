@@ -10,12 +10,12 @@ export default defineComponent({
     ModalAuth,
   },
   setup() {
-    const showMenu = ref(false);
+    const showMenu = ref<boolean>(false);
     const store = useStore();
-    const shoes = computed(() => store.state.shoes);
-    const showMiniCard = ref(false);
-    const active = ref(false);
-    const prevScroll = ref(0);
+    const shoes = computed(() => store.state.cartModule.shoes);
+    const showMiniCard = ref<boolean>(false);
+    const active = ref<boolean>(false);
+    const prevScroll = ref<number>(0);
     const navBar = ref<HTMLDivElement | null>(null);
 
     const isModalAuth = computed<boolean>(() => store.state.isModalAuth);

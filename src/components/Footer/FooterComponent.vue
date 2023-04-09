@@ -2,9 +2,9 @@
   <footer class="footer">
     <article class="footer__section">
       <h5 class="footer__title">FIND A STORE</h5>
-      <h5 class="footer__link">BECOME A MEMBER</h5>
-      <h5 class="footer__link">SIGN UP FOR EMAIL</h5>
-      <h5 class="footer__link">SNEAKERS CLUB MEMBERS</h5>
+      <h5 class="footer__title">BECOME A MEMBER</h5>
+      <h5 class="footer__title">SIGN UP FOR EMAIL</h5>
+      <h5 class="footer__title">SNEAKERS CLUB MEMBERS</h5>
     </article>
 
     <article class="footer__section">

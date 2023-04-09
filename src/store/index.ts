@@ -1,9 +1,24 @@
 import { createStore } from 'vuex';
-import { IShoe, ICarShoe, IFilters, IState } from '@/interface/interface';
+import { IShoe, IState, IFilters, TFavorites } from '@/interface/interface';
+import { cart } from './cartModule';
+import { userModule } from './userModule';
 
 export default createStore<IState>({
   state: {
-    shoes: <ICarShoe[]>[],
+    user: {
+      isLogin: <boolean>false,
+      favorites: <TFavorites[]>[],
+      errors: {
+        email: <string>'',
+        password: <string>'',
+      },
+    },
+    isFetching: <boolean>false,
+    shoesData: <IShoe[]>[],
+    isModalAuth: <boolean>false,
+    cart: {
+      shoes: [],
+    },
     showFilter: <boolean>true,
     filters: <IFilters>{
       sort: '',
@@ -12,9 +27,6 @@ export default createStore<IState>({
       brand: '',
       category: '',
     },
-    isFetching: <boolean>false,
-    shoesData: <IShoe[]>[],
-    isModalAuth: <boolean>false,
   },
   getters: {
     filteredSneakers(state) {
@@ -42,20 +54,12 @@ export default createStore<IState>({
     },
   },
   mutations: {
-    deleteShoes(state, index) {
-      state.shoes.splice(index, 1);
-    },
-    add(state, item) {
-      state.shoes.push(item);
-    },
-    restart(state) {
-      state.shoes = [];
-    },
+    //toggle filter
     changeShowFilter(state) {
       state.showFilter = !state.showFilter;
     },
 
-    // filters
+    // set filters values
     SET_FILTERS(state, { filterType, filterValue }: { filterType: keyof IFilters; filterValue: string }) {
       state.filters[filterType] = filterValue;
     },
@@ -89,6 +93,7 @@ export default createStore<IState>({
         console.log(err);
       }
     },
+
     set_filters({ commit }, { filterType, filterValue }) {
       commit('SET_FILTERS', { filterType, filterValue });
     },
@@ -98,5 +103,8 @@ export default createStore<IState>({
     },
   },
 
-  modules: {},
+  modules: {
+    cartModule: cart,
+    userModule,
+  },
 });

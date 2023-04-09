@@ -5,9 +5,9 @@ export default defineComponent({
   name: 'MiniCard',
   setup() {
     const store = useStore();
-    const shoes = computed(() => store.state.shoes);
-    const deleteShoes = (index: number) => store.commit('deleteShoes', index);
-    const restart = () => store.commit('restart');
+    const shoes = computed(() => store.state.cartModule.shoes);
+    const deleteShoes = (index: number) => store.commit('cartModule/deleteShoes', index);
+    const restart = () => store.commit('cartModule/restart');
     return {
       shoes,
       deleteShoes,

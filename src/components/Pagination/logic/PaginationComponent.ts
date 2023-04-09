@@ -4,7 +4,7 @@ import { useStore } from 'vuex';
 export default defineComponent({
   name: 'PaginationComponent',
   setup() {
-    const page = ref<number>(2);
+    const page = ref<number>(1);
     const store = useStore();
     const changePage = (number: number) => {
       page.value = number;

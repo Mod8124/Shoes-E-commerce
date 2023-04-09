@@ -2,8 +2,7 @@ import { defineComponent, PropType } from 'vue';
 import { ref } from '@vue/reactivity';
 import { useStore } from 'vuex';
 import Price from '@/components/Price/PriceComponent.vue';
-import { ICarShoe } from '@/interface/interface';
-import { IShoe } from '@/interface/interface';
+import { ICartShoe, IShoe } from '@/interface/interface';
 
 export default defineComponent({
   props: {
@@ -18,7 +17,7 @@ export default defineComponent({
   setup(props) {
     const count = ref<number>(0);
     const store = useStore();
-    const add = (product: ICarShoe) => store.commit('add', product);
+    const add = (product: ICartShoe) => store.commit('cartModule/add', product);
 
     const addShopping = () => {
       if (count.value > 0) {
