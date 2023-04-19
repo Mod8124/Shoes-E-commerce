@@ -14,3 +14,21 @@
 .filters .price {
   margin-top: -8px;
 }
+
+@media screen and (max-width: 600px) {
+  .filter {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: space-around;
+  }
+  .filters {
+    padding-left: 0;
+    column-gap: 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .filters {
+    padding-left: 10px;
+  }
+}

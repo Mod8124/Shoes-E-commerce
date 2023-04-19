@@ -1,3 +1,5 @@
+@import '@/scss/variables.scss';
+
 .collectionsShoes {
   display: flex;
   width: 100%;
@@ -8,10 +10,11 @@
 .types {
   min-width: 180px;
   max-height: 100vh;
+  display: none;
 }
 
 .types__title {
-  color: hsl(220, 13%, 13%);
+  color: $VeryVarkBlue;
   padding-bottom: 30px;
   font-weight: 500;
 }
@@ -41,4 +44,61 @@
   display: flex;
   row-gap: 30px;
   column-gap: 40px;
+}
+
+.typesMobile {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  padding: 80px 40px;
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3vh;
+    align-items: center;
+  }
+
+  &__title {
+    color: $VeryVarkBlue;
+    font-size: 1.8em;
+  }
+}
+
+.collections__empty {
+  font-size: 1.4em;
+  color: $DarkGrayishBlue;
+}
+
+.collections__containerr {
+  width: 100%;
+}
+
+.collections__container--active {
+  column-gap: 20px;
+}
+
+@media screen and (max-width: 650px) {
+  .collections__container {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .collections__container {
+    column-gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .types {
+    display: block;
+  }
+  .typesMobile {
+    display: none;
+  }
 }

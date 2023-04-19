@@ -19,8 +19,16 @@ export default defineComponent({
     const shoes = computed(() => store.getters.sortedSneakers);
     const showFilter = computed(() => store.state.showFilter);
     const isFetching = computed<boolean>(() => store.state.isFetching);
+    const isEmpty = computed(() => store.getters.checkIsEmpty);
+    const closeShowFilter = () => store.commit('changeShowFilter');
 
     onMounted(() => {
+      if (shoes.value.length < 1) {
+        store.dispatch('getShoesData', {
+          page: 1,
+        });
+      }
+
       store.dispatch('set_filters', {
         filterType: 'gender',
         filterValue: 'Men',
@@ -38,6 +46,8 @@ export default defineComponent({
       shoes,
       showFilter,
       isFetching,
+      isEmpty,
+      closeShowFilter,
     };
   },
 });

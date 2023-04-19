@@ -1,3 +1,5 @@
+@import '@/scss/variables.scss';
+
 .product {
   max-width: 1440px;
   width: 100%;
@@ -5,9 +7,12 @@
   min-height: 80vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  flex-direction: column;
 }
 
-.product__container {
+.product__view {
   display: grid;
   height: 90%;
   width: 100%;
@@ -17,7 +22,37 @@
 
 .product__skeleton {
   width: 100%;
-  background-color: blue;
+}
+
+.product__container {
+  flex-wrap: wrap;
+  display: flex;
+  row-gap: 30px;
+  column-gap: 40px;
+  justify-content: center;
+}
+
+.product__recommendations {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  h5 {
+    color: $OrangeP;
+    padding-bottom: 8px;
+  }
+
+  h2 {
+    color: $VeryVarkBlue;
+    padding-bottom: 26px;
+    text-transform: uppercase;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -27,7 +62,25 @@
 }
 
 @media screen and (min-width: 800px) {
-  .product__container {
+  .product__view {
     grid-template-columns: 48% 48%;
+  }
+  .product__recommendations {
+    text-align: start;
+  }
+  .product__container {
+    justify-content: unset;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .product__container {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .product__container {
+    column-gap: 10px;
   }
 }

@@ -5,13 +5,14 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
+    "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@types/js-cookie": "^3.0.3",
     "core-js": "^3.8.3",
     "js-cookie": "^3.0.1",
+    "jwt-decode": "^3.1.2",
     "oh-vue-icons": "^1.0.0-rc3",
     "validator": "^13.9.0",
     "vue": "^3.2.13",
@@ -19,7 +20,7 @@
     "vuex": "^4.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.1",
+    "@types/jest": "^27.5.2",
     "@types/validator": "^13.7.14",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
@@ -31,7 +32,7 @@
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
-    "@vue/test-utils": "^2.0.0-0",
+    "@vue/test-utils": "^2.3.2",
     "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-jest": "^27.0.6",
     "eslint": "^7.32.0",

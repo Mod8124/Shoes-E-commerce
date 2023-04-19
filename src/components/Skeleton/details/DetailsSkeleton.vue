@@ -6,22 +6,7 @@
 </template>
 
 <style lang="scss">
-@keyframes pulse {
-  50% {
-    opacity: 0.5;
-  }
-}
-
-.detailsSkeleton {
-  width: 100%;
-  min-height: 40vh;
-  max-width: 1300px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 48% 44%;
-  justify-content: space-between;
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
+@import './scss/DetailsSkeleton.scss';
 </style>
 
 <script lang="ts">

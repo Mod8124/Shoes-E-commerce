@@ -32,7 +32,7 @@
 .homeJoin__para {
   color: $DarkGrayishBlue;
   font-size: 1.1em;
-  padding-bottom: 18px;
+  padding-bottom: 20px;
 }
 .homeJoin__btn {
   background: $VeryVarkBlue;
@@ -46,4 +46,26 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .home {
+    min-height: auto;
+
+    &__img {
+      width: 100%;
+      padding-top: 40px;
+    }
+  }
+
+  .homeJoin__title {
+    font-size: 1.1em;
+    width: 94%;
+    margin: 0 auto;
+  }
+
+  .homeJoin__para {
+    color: $DarkGrayishBlue;
+    font-size: 1em;
+  }
 }

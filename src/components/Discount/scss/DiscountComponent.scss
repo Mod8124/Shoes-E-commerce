@@ -9,12 +9,20 @@
   padding-top: 14px;
   color: $LightGrayishBlue;
   font-size: 0.8em;
-  /* position: fixed;
-  top: 0px;
-  left: 0;
-  width: 100%; */
 
   &__span {
     color: $OrangeP;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .discountComponent {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 0.7em;
+    &__title {
+      width: 90%;
+      text-align: center;
+    }
   }
 }

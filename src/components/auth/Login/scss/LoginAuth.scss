@@ -9,50 +9,88 @@
   grid-template-rows: 25% 75%;
   text-align: center;
 
+  &__title {
+    padding-top: 20px;
+    color: $VeryVarkBlue;
+  }
+
+  &__error {
+    color: $errorMsg;
+    min-height: 16px;
+    padding-top: 4px;
+    font-size: 12px;
+    text-align: start;
+    width: 90%;
+    margin: 0 auto;
+    transition: all 0.5s ease-in;
+  }
+
   &__iconClose {
     padding: 20px;
     display: flex;
     justify-content: flex-end;
-  }
-}
-
-.auth {
-  &__icon {
-    cursor: pointer;
-  }
-
-  &__title {
-    padding-top: 20px;
-    color: $VeryVarkBlue;
   }
 
   &__para {
     color: $DarkGrayishBlue;
     font-size: 1em;
   }
+
+  &__accountBtn {
+    background-color: transparent;
+    color: $VeryVarkBlue;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__input {
+    width: 90%;
+    border: 2px solid $GrayishBlue;
+    padding: 10px 10px;
+    margin-top: 20px;
+    outline: none;
+    color: $VeryVarkBlue;
+
+    &::placeholder {
+      color: $DarkGrayishBlue;
+    }
+  }
+
+  &__input--active {
+    border: 2px solid $errorMsg;
+  }
+
+  &__input--margin {
+    margin-top: 8px;
+  }
+
+  &__icon {
+    cursor: pointer;
+  }
+
+  &__inputContainer {
+    width: 100%;
+    position: relative;
+  }
+
+  &__inputICon {
+    position: absolute;
+    right: 10%;
+    top: 38%;
+    cursor: pointer;
+  }
 }
 
 .logIng__cta {
   justify-self: center;
   height: 100%;
+  width: 100%;
   text-align: center;
 }
 
 .logIn__imageContainer {
   text-align: center;
-}
-
-.authInput {
-  width: 90%;
-  border: 2px solid $GrayishBlue;
-  padding: 10px 10px;
-  margin-top: 20px;
-  outline: none;
-  color: $VeryVarkBlue;
-
-  &::placeholder {
-    color: $DarkGrayishBlue;
-  }
 }
 
 .logIn__btnContainer {
@@ -62,7 +100,7 @@
 }
 
 .logIn__btn {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
   background: $VeryVarkBlue;
   font-weight: bolder;
@@ -71,13 +109,5 @@
   text-transform: uppercase;
   width: 100%;
   padding: 12px 40px;
-  cursor: pointer;
-}
-
-.auth__accountBtn {
-  background-color: transparent;
-  color: $VeryVarkBlue;
-  font-weight: bold;
-  border: none;
   cursor: pointer;
 }

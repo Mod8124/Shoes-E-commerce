@@ -19,6 +19,11 @@ import {
   CoTiktok, // tik tok
   LaFacebookF, // facebook
   MdPlaceSharp, // icon place or gps
+  FaSpinner, // icon  spin
+  CoAccountLogout, //icon logout
+  LaTrashAltSolid, // icon trash
+  BiEye, // icon open eye
+  BiEyeSlash, // icon close eye
 } from 'oh-vue-icons/icons';
 
 addIcons(
@@ -37,7 +42,12 @@ addIcons(
   CoTiktok,
   LaFacebookF,
 
-  MdPlaceSharp
+  MdPlaceSharp,
+  FaSpinner,
+  CoAccountLogout,
+  LaTrashAltSolid,
+  BiEye,
+  BiEyeSlash
 );
 
 createApp(App).component('v-icon', OhVueIcon).use(store).use(router).mount('#app');

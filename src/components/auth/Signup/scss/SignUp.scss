@@ -9,6 +9,42 @@
   grid-template-rows: 30% 70%;
   text-align: center;
 
+  &__icon {
+    cursor: pointer;
+  }
+
+  &__btnContainer {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__btn {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: $VeryVarkBlue;
+    font-weight: bolder;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 12px 40px;
+    cursor: pointer;
+  }
+
+  &__accountBtn {
+    background-color: transparent;
+    color: $VeryVarkBlue;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__title {
+    color: $VeryVarkBlue;
+    padding-bottom: 10px;
+  }
+
   &__iconBack {
     padding: 20px;
     display: flex;
@@ -17,30 +53,58 @@
 
   &__error {
     color: $errorMsg;
-    min-height: 20px;
-    padding-top: 6px;
+    min-height: 18px;
+    padding-top: 4px;
     font-size: 12px;
     text-align: start;
     width: 90%;
     margin: 0 auto;
+    transition: all 0.5s ease-in-out;
   }
-}
 
-.authInput--active {
-  border: 2px solid $errorMsg;
-}
+  &__para {
+    color: $DarkGrayishBlue;
+    font-size: 1em;
+  }
 
-.authInput--margin {
-  margin-top: 6px;
-}
+  &__input {
+    width: 90%;
+    border: 2px solid $GrayishBlue;
+    padding: 10px 10px;
+    margin-top: 16px;
+    outline: none;
+    color: $VeryVarkBlue;
 
-.auth__para--sign {
-  padding-top: 14px;
-}
+    &::placeholder {
+      color: $DarkGrayishBlue;
+    }
+  }
 
-.auth__para--privacy {
-  padding-top: 14px;
-  width: 90%;
-  margin: 0 auto;
-  font-size: 0.9em;
+  &__input--active {
+    border: 2px solid $errorMsg;
+  }
+
+  &__input--margin {
+    margin-top: 8px;
+  }
+
+  &__para--privacy {
+    padding-top: 6px;
+    padding-bottom: 4px;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.9em;
+  }
+
+  &__inputContainer {
+    width: 100%;
+    position: relative;
+  }
+
+  &__inputICon {
+    position: absolute;
+    right: 10%;
+    top: 38%;
+    cursor: pointer;
+  }
 }

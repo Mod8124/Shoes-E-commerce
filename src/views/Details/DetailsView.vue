@@ -11,7 +11,7 @@
       <h5>Relational Product /</h5>
       <h2>WE RECOMMEND</h2>
 
-      <article class="collections__container details__recommendationsContainer" v-if="isFetching">
+      <article class="details__container details__recommendationsContainer" v-if="isFetching">
         <article
           v-for="cardSkeleton in [...Array(4).keys()]"
           :key="cardSkeleton + 'details-skeleton'"
@@ -20,11 +20,11 @@
           <CardSkeleton />
         </article>
       </article>
-      <article class="collections__container details__recommendationsContainer" v-if="!isFetching">
+      <article class="details__container details__recommendationsContainer" v-if="!isFetching">
         <nav v-for="shoe in recommendations" :key="shoe.id + 'recommendations'">
           <router-link
             :to="
-              shoe.id === 0
+              shoe.id === 1
                 ? { name: 'Product', params: { id: shoe.id } }
                 : { name: 'Details', params: { id: shoe.id } }
             "

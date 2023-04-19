@@ -1,0 +1,131 @@
+@import '@/scss/variables.scss';
+
+.accountAuth {
+  background-color: white;
+  box-shadow: 2px 4px 4px $GrayishBlue;
+  position: absolute;
+  top: 150%;
+  min-height: 100%;
+  right: 40px;
+  min-width: 180px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+
+  &__icon {
+    cursor: pointer;
+  }
+
+  &__para {
+    margin-top: 12px;
+    display: flex;
+    color: $DarkGrayishBlue;
+    column-gap: 10px;
+    transition: all 0.5s ease-in;
+  }
+
+  &__para:hover {
+    color: $VeryVarkBlue;
+  }
+}
+
+.accountAuth--favorites {
+  min-width: 340px;
+  padding: 20px;
+}
+
+.favoritesCards {
+  justify-content: space-between;
+  margin-top: 20px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.favoritesCard {
+  width: 100%;
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 30% 60% 5%;
+  transition: all 0.5s ease-in;
+
+  &:hover {
+    font-weight: bold;
+  }
+
+  &__company {
+    color: $OrangeP;
+    padding-bottom: 2px;
+  }
+
+  &__para {
+    color: $DarkGrayishBlue;
+    font-size: 0.9em;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 70px;
+      max-height: 60px;
+      object-fit: cover;
+    }
+  }
+
+  &__deleteBtn {
+    background-color: transparent;
+    border: none;
+    padding-top: 4px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+}
+
+.favorites {
+  &__title {
+    padding-top: 20px;
+    padding-bottom: 4px;
+    color: $VeryVarkBlue;
+    font-size: 1.3em;
+    border-bottom: 3px solid $LightGrayishBlue;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &__para--sub {
+    color: $VeryVarkBlue;
+    font-weight: 700;
+
+    padding-bottom: 8px;
+    margin-top: 20px;
+  }
+
+  &__para {
+    color: $DarkGrayishBlue;
+  }
+
+  &__loading {
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+.favorites__container {
+  width: 100%;
+}
+
+@media screen and (max-width: 780px) {
+  .accountAuth {
+    right: 5%;
+    width: 60%;
+    top: 110%;
+  }
+  .accountAuth--favorites {
+    width: 90%;
+    padding: 20px;
+  }
+}

@@ -5,8 +5,14 @@
   <img src="./public/shoes_log.svg" alt="sneaker" width="80">
 
   <h2 align="center">Sneaker E-commerce</h2>
+  <p>A shoe e-commerce app with a free API serving a collection of sneakers.</p>
+  <br />
+      <a href="https://github.com/Mod8124/freeShoesApi">Explore the shoes API</a>
+    ·
+    <a href="https://github.com/Mod8124/Shoes-E-commerce/issues">Bug report</a>
+    ·
+    <a href="https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-tmQXOQU78e">Frontend Mentor Challenge</a>
   <p align="center">
-    <a href="https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-tmQXOQU78e"><strong>Frontend Mentor Challenge</strong></a>
     <br />
     <br />
       <img src="https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D" alt="vue icon">
@@ -25,7 +31,9 @@
 
 ## 📃Project Overview
 
-Developed & designed a sneaker e-commerce app inspired in <a href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6">Frontend Mentor</a> challenge, built API with API for providing all the sneakers, utilizing NodeJs on the server-side, and the client-side with Vue via an API. Implemented design features, state management, router, and CSS methodology like BEM in SASS.
+Developed & designed a sneaker e-commerce app inspired in <a href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6">Frontend Mentor</a> challenge, built <a href="https://github.com/Mod8124/freeShoesApi">API</a> for providing all the sneakers, utilizing NodeJs on the server-side, and the client-side with Vue via an API. Implemented design features, state management, router, and CSS methodology like BEM in SASS.
+
+<a href="https://github.com/Mod8124/freeShoesApi">See docs for shoes' API</a>
 
 ## 📋Features:
 

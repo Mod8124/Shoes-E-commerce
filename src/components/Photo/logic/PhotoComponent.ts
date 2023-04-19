@@ -9,7 +9,7 @@ export default defineComponent({
   name: 'PhotoComponent',
   props: {
     shoe: {
-      required: true,
+      required: false,
       type: Object as PropType<IShoe>,
     },
     mainShoe: {

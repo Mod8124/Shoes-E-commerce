@@ -1,6 +1,6 @@
 import ShowProduct from '@/components/ShowProduct/ShowProduct.vue';
 import { IShoe } from '@/interface/interface';
-import { PropType, defineComponent } from 'vue';
+import { PropType, defineComponent, onMounted, onBeforeUnmount } from 'vue';
 
 export default defineComponent({
   name: 'ModalComponent',
@@ -24,5 +24,14 @@ export default defineComponent({
   },
   components: {
     ShowProduct,
+  },
+  setup() {
+    onMounted(() => {
+      document.body.style.overflow = 'hidden'; // Ensure overflow is initially set to auto
+    });
+
+    onBeforeUnmount(() => {
+      document.body.style.overflow = 'auto'; // Restore overflow to auto when component is unmounted
+    });
   },
 });

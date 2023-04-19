@@ -1,12 +1,17 @@
 @import '@/scss/variables.scss';
-.footer {
+
+.footerComponent {
   min-height: 30vh;
   background: $VeryVarkBlue;
   margin-top: 90px;
-  display: grid;
-  grid-template-columns: 20% 20% 20% 40%;
   padding: 70px 200px;
   padding-bottom: 0px;
+  width: 100%;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 40%;
 
   &__title {
     color: white;
@@ -41,7 +46,6 @@
 
 .footer__footer {
   padding-top: 70px;
-  grid-column: 1 / 5;
   color: $DarkGrayishBlue;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -58,10 +62,46 @@
       color: white;
     }
   }
+}
 
-  div:nth-child(2) {
-    justify-content: flex-end;
-    column-gap: 20px;
-    color: $DarkGrayishBlue;
+.footer__privacy {
+  justify-content: flex-end;
+  column-gap: 20px;
+  color: $DarkGrayishBlue;
+}
+
+@media screen and (max-width: 1200px) {
+  .footerComponent {
+    padding: 60px 30px;
+    padding-top: 80px;
+    margin-top: 30px;
+  }
+
+  .footer {
+    grid-template-columns: 100%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    grid-row-gap: 40px;
+  }
+
+  .footer__footer {
+    grid-template-columns: 100%;
+    padding-bottom: 0;
+  }
+  .footer__gps {
+    order: 2;
+    padding-top: 30px;
+    justify-content: center;
+  }
+
+  .footer__privacy {
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  .social {
+    justify-content: center;
+    padding-top: 30px;
   }
 }

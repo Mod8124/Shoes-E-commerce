@@ -11,13 +11,28 @@ export const cart: Module<ICartState, IState> = {
   mutations: {
     deleteShoes(state, index) {
       state.shoes.splice(index, 1);
+      const currentShoes = [...state.shoes];
+      localStorage.setItem('cart', JSON.stringify(currentShoes));
     },
     add(state, item) {
       state.shoes.push(item);
+      const currentShoes = [...state.shoes];
+      localStorage.setItem('cart', JSON.stringify(currentShoes));
     },
     restart(state) {
       state.shoes = [];
+      localStorage.removeItem('cart');
+    },
+    setCart(state, data) {
+      state.shoes = data;
     },
   },
-  actions: {},
+  actions: {
+    getCart({ commit }) {
+      const cartData = localStorage.getItem('cart');
+      if (cartData) {
+        commit('setCart', JSON.parse(cartData));
+      }
+    },
+  },
 };

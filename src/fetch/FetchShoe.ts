@@ -9,7 +9,9 @@ const get = () => {
   const load = async (id: string) => {
     try {
       isFetching.value = true;
-      const response = await fetch('http://localhost:3000/api/v1/shoes/' + id + '?recommendation=true');
+      const response = await fetch(
+        'https://freeshoesapi-production.up.railway.app/api/v1/shoes/' + id + '?recommendation=true'
+      );
       const data = await response.json();
       if (data) {
         shoe.value = data.data;

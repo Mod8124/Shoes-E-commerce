@@ -27,8 +27,10 @@
         </button>
       </div>
     </div>
-    <button class="detail__favoriteBtn">
-      <v-icon name="hi-heart" fill="hsl(26, 100%, 55%)" scale="1.1" /> Favorite
+    <button class="detail__favoriteBtn" @click="addFavorites(shoe)">
+      <v-icon name="hi-heart" fill="hsl(26, 100%, 55%)" scale="1.1" v-if="!isFavorite" />
+      <v-icon name="hi-solid-heart" fill="hsl(26, 100%, 55%)" scale="1.1" v-if="isFavorite" />
+      {{ isFavorite ? 'Adding' : 'Favorite' }}
     </button>
   </section>
 </template>

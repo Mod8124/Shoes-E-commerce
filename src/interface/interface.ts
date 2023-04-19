@@ -12,9 +12,6 @@ export interface IShoe {
   gender: string;
   type: string;
 }
-
-export type TFavorites = Pick<IShoe, 'id' | 'name' | 'image' | 'company'>;
-
 export interface ICartShoe {
   name: string;
   img: string;
@@ -50,9 +47,22 @@ export interface IUSerStateErrors {
   password: string;
 }
 
+export type TFavorites = Pick<IShoe, 'id' | 'name' | 'image' | 'company'>;
+
+// when the data has be update
+export interface TFavoritesModel extends TFavorites {
+  _id: string;
+}
+export interface IFavorites {
+  id: string;
+  favorites: TFavoritesModel[];
+}
+
 export interface IUserSate {
+  token: string;
   isLogin: boolean;
-  favorites: TFavorites[];
+  isFetching: boolean;
+  favorites: IFavorites;
   errors: IUSerStateErrors;
 }
 

@@ -23,3 +23,15 @@
   box-shadow: -10px 4px 20px $GrayishBlue;
   transform: scale(1, 1);
 }
+
+@media screen and (max-width: 1000px) {
+  .card {
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    min-width: 300px;
+  }
+}

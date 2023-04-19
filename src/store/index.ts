@@ -1,13 +1,20 @@
 import { createStore } from 'vuex';
-import { IShoe, IState, IFilters, TFavorites } from '@/interface/interface';
+import { IShoe, IState, IFilters, TFavoritesModel } from '@/interface/interface';
 import { cart } from './cartModule';
 import { userModule } from './userModule';
+
+const URL_BASE = 'https://freeshoesapi-production.up.railway.app/api/v1/';
 
 export default createStore<IState>({
   state: {
     user: {
+      token: '',
       isLogin: <boolean>false,
-      favorites: <TFavorites[]>[],
+      isFetching: <boolean>false,
+      favorites: {
+        id: <string>'',
+        favorites: <TFavoritesModel[]>[],
+      },
       errors: {
         email: <string>'',
         password: <string>'',
@@ -52,6 +59,18 @@ export default createStore<IState>({
       });
       return state.filters.sort !== '' ? sortByPrice : getters.filteredSneakers;
     },
+    checkIsEmpty(state, getters) {
+      const sortedSneakers = getters.sortedSneakers;
+      if (sortedSneakers.length === 0 && !state.isFetching) {
+        for (const key in state.filters) {
+          if (state.filters[key as keyof IFilters]) {
+            return true;
+          }
+        }
+        return false;
+      }
+      return false;
+    },
   },
   mutations: {
     //toggle filter
@@ -83,7 +102,7 @@ export default createStore<IState>({
     async getShoesData({ commit }, { page = 1 }) {
       try {
         commit('updateIsFetching');
-        const response = await fetch(`http://localhost:3000/api/v1/shoes?page=${page}`);
+        const response = await fetch(`${URL_BASE}shoes?page=${page}`);
         const data = await response.json();
         if (data) {
           commit('updateShoesData', data.data);

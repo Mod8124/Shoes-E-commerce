@@ -1,4 +1,4 @@
-import { defineComponent, PropType } from 'vue';
+import { computed, defineComponent, PropType } from 'vue';
 import { ref } from '@vue/reactivity';
 import { useStore } from 'vuex';
 import Price from '@/components/Price/PriceComponent.vue';
@@ -17,7 +17,21 @@ export default defineComponent({
   setup(props) {
     const count = ref<number>(0);
     const store = useStore();
+    const isLogin = computed(() => store.state.userModule.isLogin);
     const add = (product: ICartShoe) => store.commit('cartModule/add', product);
+    const isFavorite = ref(false);
+    const addFavorites = (shoe: IShoe) => {
+      const { id, name, image, company } = shoe;
+      if (!isLogin.value) return;
+      store.dispatch('userModule/addFavorites', {
+        id,
+        name,
+        image,
+        company,
+      });
+      isFavorite.value = true;
+      setTimeout(() => (isFavorite.value = false), 2000);
+    };
 
     const addShopping = () => {
       if (count.value > 0) {
@@ -34,8 +48,10 @@ export default defineComponent({
     };
 
     return {
+      isFavorite,
       count,
       addShopping,
+      addFavorites,
     };
   },
 });
