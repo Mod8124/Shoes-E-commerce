@@ -19,8 +19,6 @@
       <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="type icon">
       <img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" alt="sass icon">
       <img src="https://img.shields.io/badge/vuex-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D" alt="vuex icon">
-      <img src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white">
-      <img src="https://img.shields.io/badge/status-in progress-23C21325?style=for-the-badge" alt="status icon">
   </p>
 </div>
 
