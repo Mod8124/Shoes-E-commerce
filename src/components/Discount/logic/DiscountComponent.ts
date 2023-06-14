@@ -14,7 +14,6 @@ export default defineComponent({
         return;
       }
       index.value++;
-      console.log(index);
     };
 
     onMounted(() => {

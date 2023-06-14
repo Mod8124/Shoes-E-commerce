@@ -2,17 +2,21 @@
 
 .details {
   max-width: 1440px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 80px;
+  flex-direction: column;
 }
 
 .details__view {
   display: grid;
-  height: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  grid-template-columns: 110%;
+  height: 90%;
+  width: 100%;
+  grid-template-columns: 100%;
   justify-content: space-between;
 }
 

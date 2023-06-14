@@ -29,6 +29,7 @@
           v-model="password"
         />
         <v-icon
+          @click="toggleShowPassword"
           class="logIn__inputICon"
           fill="hsl(219, 9%, 45%)"
           scale="1.1"
