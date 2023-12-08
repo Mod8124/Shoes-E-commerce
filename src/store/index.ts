@@ -3,7 +3,7 @@ import { IShoe, IState, IFilters, TFavoritesModel } from '@/interface/interface'
 import { cart } from './cartModule';
 import { userModule } from './userModule';
 
-const URL_BASE = 'https://freeshoesapi-production.up.railway.app/api/v1/';
+const URLBASE = process.env.VUE_APP_MY_ENV_VARIABLE;
 
 export default createStore<IState>({
   state: {
@@ -102,7 +102,7 @@ export default createStore<IState>({
     async getShoesData({ commit }, { page = 1 }) {
       try {
         commit('updateIsFetching');
-        const response = await fetch(`${URL_BASE}shoes?page=${page}`);
+        const response = await fetch(`${URLBASE}shoes?page=${page}`);
         const data = await response.json();
         if (data) {
           commit('updateShoesData', data.data);

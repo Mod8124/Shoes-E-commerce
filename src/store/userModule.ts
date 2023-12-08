@@ -18,7 +18,7 @@ const userBase = {
   },
 };
 
-const URL_BASE = 'https://freeshoesapi-production.up.railway.app/api/v1/';
+const URL_BASE = process.env.VUE_APP_MY_ENV_VARIABLE;
 
 export const userModule: Module<IUserSate, IState> = {
   namespaced: true,
